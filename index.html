@@ -1,0 +1,66 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2016-11-16
+    See: https://launchpad.net/bugs/1288690
+  -->
+<head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+</head>
+<div w3-include-html="/base-info.html"></div> 
+<script>
+includeHTML();
+</script>
+<p style="text-align: center;">
+	Welcome To The Kydonian Minecraft Government Website. This is for organizing Kydonian Efforts across Minecraft Servers all over.
+</p>
+<p style="text-align: center;">
+	To apply to become a Kydonian Citizen, Please fill out
+	<a href="https://forms.gle/wo7UJBVKUGzYtKzx8" title="Kydonian Citizen Form">
+		this</a>
+	 Google Form.
+</p>
+<p style="text-align: center;">
+	A list of all the public servers you can find Kydonia:
+</p>
+<p>&nbsp;</p>
+<p style="text-align: center;">
+</p>
+<p style="text-align: center;">
+	Listen To The Official Kydonian Audio Live Stream Here. 
+</p>
+<audio controls="controls">
+<source src="http://192.168.9.239:8000/listen"/></audio>
+<p>If the play button doesn't work, that probably means that the stream isn't up.</p>
+<p>Have questions? Join the Kydonian Discord right here!</p>
+<iframe src="https://discordapp.com/widget?id=608582804607074314&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
