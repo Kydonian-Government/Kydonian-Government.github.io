@@ -1,0 +1,4 @@
+# Test
+User-agent: *
+Allow: /
+Disallow: /θηηιcrΘΠ-Council
