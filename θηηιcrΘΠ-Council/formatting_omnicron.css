@@ -186,6 +186,10 @@
   color: #8a8a8a;
 }
 
+.header a.logo:hover {
+  background-color: #5100ff;
+  color: #8a8a8a;
+}
 /* Style the active/current link*/
 .header a.active {
   background-color: dodgerblue;
