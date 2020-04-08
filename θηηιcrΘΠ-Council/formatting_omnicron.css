@@ -14,7 +14,8 @@
     font-family: Roboto, sans-serif;
     font-size: 14pt;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF;    
+    word-wrap: break-word
   }
 
   div.main_page {
