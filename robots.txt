@@ -1,9 +1,2 @@
-# Test
 User-agent: *
-Allow: /
-Disallow: /θηηιcrΘΠ-Council
-
-# Test 2
-User-agent: Adsbot-Google
-Allow: /
-Disallow: /θηηιcrΘΠ-Council
+Disallow: /
